@@ -1,0 +1,1 @@
+docker-compose -f do-compose.yml -f docker-compose.override.yml up -d -> Up an instance of docker
