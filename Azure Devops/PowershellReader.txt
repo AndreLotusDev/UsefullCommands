@@ -1,0 +1,37 @@
+steps:
+        - task: PowerShell@2
+          inputs:
+            targetType: inline
+            script: |
+                $dirs = Get-ChildItem -Path \.
+                Write-Host $dirs
+
+
+                $file = Get-Content -Path '.\config.ini'
+                $linesToUpdate = [System.Collections.ArrayList]@()
+
+                ForEach($row in $file)
+                {
+                    if(!$row.Contains("="))
+                    {
+                        $linesToUpdate.Add($row)
+                        continue
+                    } 
+                    
+                    $valueToReceiveValue = $row.Split('=')[0].Trim()
+                    $value = $row.Split('=')[1].Trim()
+
+                    $newValue = [System.Environment]::GetEnvironmentVariable($valueToReceiveValue.ToUpper())
+
+                    if(![string]::IsNullOrEmpty($newValue)) {
+                        $formatted = $valueToReceiveValue + " = " + "'" + $newValue + "'"
+                    }
+                    else {
+                        $formatted = $valueToReceiveValue + " = " + "'Test'"
+                    }
+
+                    Write-Host "Formatado: " $formatted
+                    $linesToUpdate.Add($formatted)
+                } 
+                Clear-Content '.\config.ini'
+                $linesToUpdate | Out-File -Append '.\config.ini'

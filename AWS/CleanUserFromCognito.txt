@@ -1,0 +1,47 @@
+import boto3
+
+session = boto3.Session(
+    aws_access_key_id='KEY_CHANGE',
+    aws_secret_access_key='KEY_CHANGE',
+)
+
+client = session.client(
+    'cognito-idp',
+    region_name='KEY_CHANGE',
+)
+
+idOfAdmin = ''
+listOfUsersToDelete = []
+
+users = []
+next_page = None
+kwargs = {
+    'UserPoolId': "KEY_CHANGE"
+}
+
+users_remain = True
+while (users_remain):
+    if next_page:
+        kwargs['PaginationToken'] = next_page
+    response = client.list_users(**kwargs)
+    newUsersFound = response['Users']
+    for listUserAttrs in newUsersFound:
+        listOfUsersToDelete.append(listUserAttrs['Username'])
+        for user in listUserAttrs['Attributes']:
+            if (user['Name'] == 'name'):
+                if ("Admin Admin" in user['Value']):
+                    idOfAdmin = listUserAttrs['Username']
+    users.extend(newUsersFound)
+    next_page = response.get('PaginationToken', None)
+    users_remain = next_page is not None
+
+# if (idOfAdmin in listOfUsersToDelete):
+#     print('Admin inside')
+
+for user in listOfUsersToDelete:
+    if(user != idOfAdmin):
+        response = client.admin_delete_user(
+            UserPoolId='KEY_CHANGE',
+            Username=user
+        )
+        print(response)

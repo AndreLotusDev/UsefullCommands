@@ -1,0 +1,30 @@
+## Build {{buildDetails.buildNumber}}
+
+## Associated Pull Requests ({{pullRequests.length}})
+{{#forEach pullRequests}}
+* **[{{this.pullRequestId}}]({{replace (replace this.url "_apis/git/repositories" "_git") "pullRequests" "pullRequest"}})** {{this.title}}
+* Associated Commits
+{{#forEach this.associatedCommits}}
+    - [{{this.commitId}}]({{replace this.remoteUrl " " "%20"}}) -  {{this.comment}}
+{{/forEach}}
+{{/forEach}}
+
+<hr/>
+
+# Global list of CS ({{commits.length}})
+{{#forEach commits}}
+{{#if isFirst}}### Associated commits{{/if}}
+
+<hr/>
+
+* ** ID{{this.id}}**
+   -  **Message:** {{this.message}}
+   -  **Commited by:** {{this.author.displayName}}
+   -  **FileCount:** {{this.changes.length}}
+{{#forEach this.changes}}
+      -  **File path changed:** {{this.item.path}}
+{{/forEach}}
+
+<hr/>
+
+{{/forEach}}
