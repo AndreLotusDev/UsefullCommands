@@ -1,0 +1,8 @@
+[alias]
+	c = !gid add --all && git commit -m
+	s = !git status -s
+	l = !git log --pretty=format:\"%C(blue)%h%C(red)%d %C(cyan)%s %C(green)%cn, %C(green)%cr\"
+	t = !sh -c 'git tag -a $1 -m $1'
+	ammend = !git add --all && git commit --amend --no-edit
+[push]
+	followTags = true
