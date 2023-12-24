@@ -1,2 +1,32 @@
 git config --global core.editor code
 git config --global --edit
+
+1. `git init`: Initializes a new Git repository in the current directory. This command creates a hidden `.git` directory where Git stores all its data.
+
+2. `git clone <repository_url>`: Creates a copy of a remote repository on your local machine. It's the first step to start working on an existing project.
+
+3. `git add <file>`: Stages changes for commit. You can use `git add .` to stage all changes in the current directory.
+
+4. `git commit -m "commit message"`: Records staged changes to the repository with a descriptive commit message. The commit message should summarize the changes made in this commit.
+
+5. `git status`: Shows the status of your working directory. It displays information about which files are modified, staged, or untracked.
+
+6. `git log`: Displays a history of commits, including commit messages, authors, and timestamps. You can use options like `--oneline` for a more concise view.
+
+7. `git branch`: Lists all branches in the repository. The current branch is indicated with an asterisk (*).
+
+8. `git checkout <branch_name>`: Switches to a different branch. You can also use this command to create a new branch by specifying `-b`.
+
+9. `git merge <branch_name>`: Combines changes from one branch into another. It's used to integrate the changes made in one branch into another, typically merging feature branches into the main branch.
+
+10. `git pull`: Fetches changes from a remote repository and merges them into the current branch. It's commonly used to update your local repository with changes from the remote repository.
+
+11. `git push`: Pushes your local commits to a remote repository. It's used to share your changes with others or update a remote branch with your changes.
+
+12. `git remote`: Shows a list of remote repositories that your local repository is connected to. You can use this command with options like `-v` to see more details.
+
+13. `git fetch`: Retrieves changes from a remote repository but doesn't merge them into your local branch. It's useful for inspecting changes before merging.
+
+14. `git reset`: Unstages changes or moves the HEAD to a previous commit. This command can be used to undo previous commits or reset the staging area.
+
+15. `git stash`: Temporarily saves changes that are not ready to be committed, allowing you to switch branches or perform other tasks without losing your work.
