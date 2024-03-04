@@ -1,0 +1,25 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: life-copilot-kernel-service
+spec:
+  selector:
+    app: life-copilot-kernel
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 7175
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+spec:
+  selector:
+    app: postgres
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432

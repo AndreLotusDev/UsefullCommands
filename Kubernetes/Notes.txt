@@ -1,3 +1,31 @@
 kubectl apply -f {service_name}
 kubectl apply -f {ingress_name}
 kubectl apply -f {deployment_name}
+
+//Follow the logs in a pod
+kubectl logs -f <pod-name>
+
+//Re start
+minikube stop
+minikube start
+
+//Describe something already applied
+kubectl describe deployment {something_u_want_to_know_about}
+
+//Get all pods
+kubectl get pods
+
+//Get all services
+kubectl get services
+
+//Get all ingress
+kubectl get ingress
+
+//Enable ingress in minikube
+minikube addons enable ingress
+
+//Enable port forwarding on minikube
+kubectl port-forward service/service‑name-service 9090:9090 [OUTSIDE_PORT:DESIRED_INTERNAL_PORT]
+
+//Get url of a service
+minikube service service_name --url

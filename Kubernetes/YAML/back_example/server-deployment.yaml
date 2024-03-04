@@ -1,0 +1,19 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: life-copilot-kernel-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: life-copilot-kernel
+  template:
+    metadata:
+      labels:
+        app: life-copilot-kernel
+    spec:
+      containers:
+      - name: life-copilot-kernel
+        image: andregomesbr/lifecopilotback:latest
+        ports:
+        - containerPort: 5000
