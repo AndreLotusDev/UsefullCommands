@@ -1,0 +1,3 @@
+kubectl apply -f {service_name}
+kubectl apply -f {ingress_name}
+kubectl apply -f {deployment_name}
