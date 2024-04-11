@@ -4,3 +4,5 @@ npm install primeng --save
 npm install primeicons --save //Install NG
 
 npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/angular-fontawesome //install font awesome
+
+ng add @angular/material //Install angular material
