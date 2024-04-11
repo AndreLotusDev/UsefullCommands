@@ -1,1 +1,6 @@
 ng new my-app --no-standalone --routing --ssr=false //Start a project without standlone architecture (for new version of angular)
+
+npm install primeng --save
+npm install primeicons --save //Install NG
+
+npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/angular-fontawesome //install font awesome
