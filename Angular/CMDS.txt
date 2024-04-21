@@ -1,3 +1,5 @@
+ng serve --o //Open the server in the browser
+
 ng new my-app --no-standalone --routing --ssr=false //Start a project without standlone architecture (for new version of angular)
 
 npm install primeng --save
