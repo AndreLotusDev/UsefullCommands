@@ -1,11 +1,32 @@
 ng serve --o //Open the server in the browser
+ng serve
+---
 
 ng new my-app --no-standalone --routing --ssr=false //Start a project without standlone architecture (for new version of angular)
+ng new my-app
+ng generate component [name]
+ng generate service [name]
+ng generate module [name]
+ng generate directive|pipe|guard|interface|enum|class
+---
 
 npm install primeng --save
 npm install primeicons --save //Install NG
 
+---
+
 npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/angular-fontawesome //install font awesome
 
+---
+
+ng add //Adds support for an external library to the project, setting up configurations as necessary.
 ng add @angular/material //Install angular material
 npm install ngx-bootstrap bootstrap //Install angular boostrap
+
+---
+
+ng build //Compiles the application into an output directory. By default, the output is placed in the dist/ directory. This command has options for different environments (e.g., production or development).
+ng test //Runs unit tests on a project via Karma and Jasmine.
+ng lint //Runs linting tools on Angular code, checking for coding standard errors or potential errors.
+ng update //Updates an application and its dependencies. This command can automatically handle updates for Angular dependencies.
+
