@@ -30,3 +30,12 @@ ng test //Runs unit tests on a project via Karma and Jasmine.
 ng lint //Runs linting tools on Angular code, checking for coding standard errors or potential errors.
 ng update //Updates an application and its dependencies. This command can automatically handle updates for Angular dependencies.
 
+---
+
+# Handling with ngrx
+
+npm i @ngrx/store
+npm i @ngrx/effects
+npm i @ngrx/store-devtools
+
+---
