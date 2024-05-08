@@ -6,6 +6,8 @@ git config --global --edit
 2. `git clone <repository_url>`: Creates a copy of a remote repository on your local machine. It's the first step to start working on an existing project.
 
 3. `git add <file>`: Stages changes for commit. You can use `git add .` to stage all changes in the current directory.
+3.1 `git add -A`: Add all files at once.
+3.2 `git add *`: Same as above
 
 4. `git commit -m "commit message"`: Records staged changes to the repository with a descriptive commit message. The commit message should summarize the changes made in this commit.
 
