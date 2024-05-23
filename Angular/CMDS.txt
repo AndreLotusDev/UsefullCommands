@@ -43,3 +43,5 @@ npm i @ngrx/store-devtools
 ng generate @angular/core:control-flow //Update to the new control flow sintax (for angular upper than 17 version)
 
 ---
+
+ng xi18n //Generate international support for a tag inside a component
