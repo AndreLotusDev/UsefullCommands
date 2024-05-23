@@ -22,6 +22,7 @@ npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons 
 ng add //Adds support for an external library to the project, setting up configurations as necessary.
 ng add @angular/material //Install angular material
 npm install ngx-bootstrap bootstrap //Install angular boostrap
+npm install @angular/elements //Gives support to the custom element flow in angular
 
 ---
 
