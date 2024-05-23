@@ -42,6 +42,7 @@ npm i @ngrx/store-devtools
 ---
 
 ng generate @angular/core:control-flow //Update to the new control flow sintax (for angular upper than 17 version)
+ng generate @angular/core:standlone //Migrates the angular to the standlone components architecture
 
 ---
 
