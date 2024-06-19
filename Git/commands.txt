@@ -32,3 +32,7 @@ git config --global --edit
 14. `git reset`: Unstages changes or moves the HEAD to a previous commit. This command can be used to undo previous commits or reset the staging area.
 
 15. `git stash`: Temporarily saves changes that are not ready to be committed, allowing you to switch branches or perform other tasks without losing your work.
+
+Others:
+
+16. 'git filter-branch --force --index-filter "git rm --cached --ignore-unmatch path/file.ext" --prune-empty --tag-name-filter cat -- --all': Removes all the reference in the project of a file
