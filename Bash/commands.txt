@@ -1,3 +1,6 @@
 cd //To enter in a folder
 ls //To list item in a folder
 pwd //To see the actually path level
+
+mkdir //To create a folder
+touch //To create a file
