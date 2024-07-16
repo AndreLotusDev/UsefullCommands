@@ -1,5 +1,6 @@
 git config --global core.editor code
 git config --global --edit
+git config user.name //See what's your name in the Computer
 
 1. `git init`: Initializes a new Git repository in the current directory. This command creates a hidden `.git` directory where Git stores all its data.
 
