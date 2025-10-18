@@ -1,0 +1,2 @@
+ngrok start api web
+ngrok config edit
