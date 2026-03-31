@@ -7,6 +7,7 @@ Welcome to the UsefullCommands project! This repository serves as a comprehensiv
 ## Technologies Covered
 
 - **.NET:** The most used .NET commands.
+- **Claude Cli:** My most used commands while working with Claude CLI.
 - **GIT:** The commands that we use most of the time.
 - **Docker:** Multiple command lines to build Docker images.
 - **Kubernetes:** How to use Minikube, services, ingress, and some YAML examples.
