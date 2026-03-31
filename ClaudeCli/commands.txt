@@ -1,0 +1,14 @@
+/config = podemos configurar multiplas configuracoes, inclusive o modo pensar
+
+/init = inicia as configuracoes do claude code no repositorio desejado
+
+/context = voce verifica o quanto da janela de contexto esta sendo utilizada
+
+/clear = limpa a janela de contexto
+
+/mcp = lista todos os mcp instalados no projeto
+
+/usage = verifica o quanto de tokens tem utilizado recentemente
+
+claude -r = resume o claude com a ultima conversa que voces estavam tendo
+claude -c = resume a ultima conversa no bootstrap do claude
